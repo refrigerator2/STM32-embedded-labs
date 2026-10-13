@@ -18,6 +18,16 @@ The tasks cover foundational low-level programming concepts ranging from basic G
 
 ---
 
+### ⚠️ Important Note on Project Setup & HAL vs Bare-Metal
+
+* **Tasks 1–3 (HAL-based):** 
+  To run these projects, it is recommended to generate/create a base **STM32CubeIDE C/C++ Project** with the HAL initialization files for the `STM32L496ZGT6` (or `KAmeleon-STM32L4` board) enabled via CubeMX, and then copy the source/header files into the project's `Core/Src` and `Core/Inc` directories.
+
+* **Tasks 4–8 (Bare-Metal):** 
+  Since these tasks do **not** use the HAL library and directly manipulate registers using pointers/custom structs, they are completely framework-agnostic. While they were developed and tested inside **STM32CubeIDE**, they can also be compiled and flashed using an empty GCC ARM Makefile/CMake setup, Standard Peripheral Libraries, or any custom toolchain for ARM Cortex-M.
+
+---
+
 ## 📋 Summary of Tasks
 
 ### [Task 1: LED Diodes (HAL)](./task-01-led-diodes)
